@@ -79,13 +79,15 @@ contract RomeVerseGameTokens is ERC1155
 
   // TokenURI of a particular Token 
 
-         function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
-            string memory baseURI = _baseTokenURI;
-            // Here it checks if the length of the baseURI is greater than 0, if it is return the baseURI and attach
-            // the tokenId and `.json` to it so that it knows the location of the metadata json file for a given 
-            // tokenId stored on IPFS
-            // If baseURI is empty return an empty string
-            return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString(), ".json")) : "";
+         function uri(uint256 tokenId) public view virtual override returns (string memory) {
+           return string (
+               
+               abi.encodePacked(
+               '  
+                 _baseTokenURI,Strings.toString(_tokenId),".json"
+             
+             )
+           )
         }       
 
 
