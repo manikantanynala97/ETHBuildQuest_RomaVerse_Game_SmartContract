@@ -46,6 +46,7 @@ contract RomeVerseGameTokens is ERC1155
    { 
      _burn(msg.sender,Wool,1); // we will burn 1 Wool which we have 
      _burn(msg.sender,Leather,2); // we will burn 2 Leathers which we have 
+     _mint(msg.sender,Pant,1,"");
    } 
 
   // For minting HelmetNFT
@@ -53,12 +54,14 @@ contract RomeVerseGameTokens is ERC1155
    {
      _burn(msg.sender,Iron,1); // we will burn 1 Iron which we have 
      _burn(msg.sender,Leather,2); // we will burn 2 Leathers which we have 
+      _mint(msg.sender,Helmet,1,"");
    }
 
   // For minting SwordNFT
    function MintSwordNFT() public
    {
      _burn(msg.sender,Iron,3); // we will burn 3 Irons which we have
+     _mint(msg.sender,Sword,1,"");
    }
 
   // For minting FarmToolNFT
@@ -67,6 +70,7 @@ contract RomeVerseGameTokens is ERC1155
      _burn(msg.sender,Iron,1); // we will burn 1 Iron which we have
      _burn(msg.sender,Leather,1); // we will burn 1 Leather which we have 
      _burn(msg.sender,Wool,1);  // we will burn 1 Wool which we have
+     _mint(msg.sender,FarmTool,1,"");
    }
 
  // For minting MintAxeToolNFT
@@ -75,6 +79,7 @@ contract RomeVerseGameTokens is ERC1155
       _burn(msg.sender,Iron,1); // we will burn 1 Iron which we have
      _burn(msg.sender,Leather,1); // we will burn 1 Leather which we have 
      _burn(msg.sender,Wool,1);  // we will burn 1 Wool which we have
+     _mint(msg.sender,Axe,1,"");
    }
 
 
