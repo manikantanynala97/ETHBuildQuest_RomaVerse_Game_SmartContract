@@ -37,6 +37,7 @@ contract RomeVerseGameTokens is ERC1155
   // Minting any type of ERC20 Token 
    function MintERC20Tokens(uint256 tokenId , uint256 amount) public
    {
+     require(5<=tokenId<=9,"Token ID Number should be in between 4 and 10 for minting erc20 tokens")   
      require(amount>=5 , "You can mint any ERC20 Token above 5");
      _mint(msg.sender , tokenId, amount , "");
    }
