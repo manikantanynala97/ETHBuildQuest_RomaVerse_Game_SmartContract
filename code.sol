@@ -2,6 +2,7 @@
 pragma solidity ^0.8.7;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract RomeVerseGameTokens is ERC1155
 {
@@ -83,11 +84,9 @@ contract RomeVerseGameTokens is ERC1155
            return string (
                
                abi.encodePacked(
-               '  
-                 _baseTokenURI,Strings.toString(_tokenId),".json"
-             
+                 _baseTokenURI,Strings.toString(tokenId),".json"
              )
-           )
+           );
         }       
 
 
